@@ -2,18 +2,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: test-deploy
-  name: test-deploy
+    app: test-nginx
+  name: test-nginx
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: test-deploy
+      app: test-nginx
   template:
     metadata:
       labels:
-        app: test-deploy
+        app: test-nginx
     spec:
       containers:
-      - image: httpd
-        name: httpd
+        - image: httpd:alpine3.18
+          name: httpd
+          command: ["/bin/bash", "-c",]
+          args: ["sleep 5; exit 1"]
+
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
