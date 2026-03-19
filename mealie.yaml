@@ -16,7 +16,7 @@ spec:
         app: mealie
     spec:
       containers:
-        - image: ghcr.io/mealie-recipes/mealie:latest
+        - image: ghcr.io/mealie-recipes/mealie:v3.13.0
           name: mealie
           ports: 
             - containerPort: 9000
