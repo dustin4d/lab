@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: monica
+  name: monica
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monica
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: monica
+    spec:
+      containers:
+      - image: monica:5.0
+        name: monica
+        resources: {}
+status: {}
