@@ -20,6 +20,8 @@ spec:
         volumeMounts:
           - mountPath: /scratch
             name: scratch-data
+        ports:
+          - containerPort: 9001
       volumes:
         - name: scratch-data
           persistentVolumeClaim:
