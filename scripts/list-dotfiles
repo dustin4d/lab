@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Description: list all files in a directory
-
-for file in ~/.config/*; do
-	[[ -f "$file" ]] || continue
-	echo "$file"
-done
-
