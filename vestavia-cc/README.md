@@ -5,8 +5,9 @@ A concept landing page for [Vestavia Country Club](https://www.vestaviacc.com) (
 virtual camera lifts off and flies over the page itself.
 
 - **Stack:** Svelte 5 + Vite (no SvelteKit), Three.js for the 3D grounds, plain JS modules.
-- **Film:** `media/vestavia-flyover.mp4` — 1920×1080, 30 fps, H.264. Rendered frame-by-frame from the real page.
+- **Film:** `media/vestavia-flyover.mp4` — 26 s, 1920×1080, 30 fps, H.264. Rendered frame-by-frame from the real page.
 - **Poster:** `media/vestavia-flyover-poster.jpg`.
+- **Standalone page:** `media/vestavia-landing.html` — the whole site in one file (≈2 MB); open it straight from disk.
 
 > **Read before using this with the club.** The live site could not be scanned from the build environment
 > (its network policy blocked `www.vestaviacc.com`), so nothing here is copied from the club's own pages:
@@ -24,6 +25,7 @@ npm install
 npm run dev        # http://localhost:5173
 npm run build      # static site in dist/ (relative paths, deploy anywhere)
 npm run preview
+npm run build:single   # one self-contained HTML file -> media/vestavia-landing.html
 ```
 
 ## What's on the page
