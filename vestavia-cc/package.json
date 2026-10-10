@@ -1,0 +1,21 @@
+{
+  "name": "vestavia-cc-landing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:single": "SINGLE=1 vite build && cp dist-single/index.html media/vestavia-landing.html",
+    "preview": "vite preview",
+    "render": "node scripts/render-video.mjs"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "playwright": "1.56.1",
+    "svelte": "5.57.1",
+    "vite": "8.3.1"
+  }
+}
